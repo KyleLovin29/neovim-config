@@ -3,6 +3,7 @@ return {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup({
+        PATH = "prepend",
         ui = {
           icons = {
             package_installed = "✓",
@@ -17,7 +18,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "jdtls" },
+        ensure_installed = { "lua_ls", "jdtls" },
       })
     end,
   },
